@@ -6,12 +6,12 @@ import Nav from './Components/Nav.jsx'
 function App() {
 
   return (
-  <body>
+  <div className='body'>
     <Home/>
     <Nav/>
     <div className="wave">
    </div>
-  </body>
+   </div>
   )
 }
 

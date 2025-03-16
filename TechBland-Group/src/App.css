@@ -1,4 +1,4 @@
-body {
+.body {
   background: linear-gradient(to bottom, #008000, #12cb50);
   height: 100vh;
   margin: 0;
@@ -121,9 +121,12 @@ body {
   font-style: italic;
 }
 
-.techName {
+.home {
   color:whitesmoke;
   font-size:x-large;
   margin-top: 15px;
   margin-left: 15px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
