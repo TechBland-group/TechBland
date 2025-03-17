@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react'
 import phoneImg from "../images/slider-img.png"
 import secondImg from "../images/about-img.png"
 import thirdImg from '../images/security.png'
+import Button from "./Button.jsx"
 
 function Home() {
     
     const images = [phoneImg, secondImg, thirdImg]; // Image array
-  const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,10 +25,7 @@ function Home() {
       </section>
 
     <div className='homeContainer'>
-        <h1 className='textHome'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Quaerat asperiores veritatis nesciunt obcaecati exercitationem dolorum quam cum velit ratione, 
-            esse enim excepturi distinctio odio corrupti odit ullam ipsum omnis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, culpa. Esse laudantium autem magni laborum itaque. Consequatur necessitatibus amet voluptas consequuntur perferendis eveniet vero dignissimos, natus provident quas soluta neque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt sequi, itaque harum aspernatur rem cumque quasi fugiat quam fuga esse perferendis odit qui maiores sed cupiditate at ratione maxime debitis!
-            Veniam.</h1>
+        <h1 className='textHome'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Quaerat asperiores veritatis nesciunt obcaecati exercitationem dolorum quam cum velit ratione, esse enim excepturi distinctio odio corrupti odit ullam ipsum omnis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, culpa. Esse laudantium autem magni laborum itaque. Consequatur necessitatibus amet voluptas consequuntur perferendis eveniet vero dignissimos, natus provident quas soluta neque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt sequi, itaque harum aspernatur rem cumque quasi fugiat quam fuga esse perferendis odit qui maiores sed cupiditate at ratione maxime debitis!Veniam.</h1>
       <div className="carousel">
         {images.map((img, index) => (
           <img
@@ -38,6 +36,9 @@ function Home() {
           />
         ))}
       </div>
+      </div>
+      <div className='buttonHome'>
+        <Button>Read More</Button>
       </div>
     </div>
   );

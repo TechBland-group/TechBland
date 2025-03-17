@@ -3,13 +3,15 @@
   height: 100vh;
   margin: 0;
   display: flex;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  width: 100%;
 }
 
 .wave {
   position: absolute;
   bottom: 0;
-  width: 190%;
-  height: 30%;
+  width: 100%;
+  height: 20%;
   background: white;
   clip-path: path("M0,100 C150,200 350,0 500,100 C650,200 850,0 1000,100 C1150,200 1350,0 1500,100 L1500,300 L0,300 Z");
 }
@@ -20,36 +22,45 @@
   font-size: x-large;
   margin-top: 15px;
   margin-left: 15px;
-  font-family: "Kanit", sans-serif;
-  font-weight: 700;
+  font-family: "Tektur", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
 .homeContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-width: 300px;
-  margin-left: 10%;
+  margin-left: 5%; /* Reduce left margin */
+  margin-right: 5%;
   margin-top: 7%;
+  max-width: 100%; /* Prevents overflow */
 }
 .textHome {
   font-size: medium;
+  font-weight: 400;
   margin-top: 20%;
-  font-family: "Kanit", sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: whitesmoke;
+}
+
+.buttonHome {
+  margin-left: 10%;
 }
 /* Carousel Container */
 .carousel {
-  width: 350px;
-  height: 350px;
+  max-width: 100%; /* Ensures it stays within the container */
+  width: 380px;
+  height: 380px;
   margin: 20px auto; /* Center the carousel */
   overflow: hidden;
+  position: relative;
+  border-radius: 20%; /* Rounds the carousel itself */
 }
 
 /* Image Styling */
 .carousel-img {
-  width: 350px;
-  height: 350px;
+  width: 380px;
+  height: 380px;
   object-fit: cover;
   position: absolute;
   opacity: 0;
@@ -59,4 +70,16 @@
 /* Active Image (Visible One) */
 .carousel-img.active {
   opacity: 1;
+}
+
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(10, 220, 10), green);
+  opacity: 0.7; /* Adjust transparency */
+  pointer-events: none; /* Ensures it doesn’t block interactions */
 }

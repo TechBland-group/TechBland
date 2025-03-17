@@ -1,0 +1,16 @@
+.customButton {
+    color: rgb(0, 0, 0);
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10%;
+    font-family: "Tektur", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 50px;
+    width: 100px;
+}
+ .customButton.clicked {
+    background-color: black;
+    color: white;
+    text-shadow: 0 0 3px #00ff00, 0 0 3px #12cb50;
+ }
